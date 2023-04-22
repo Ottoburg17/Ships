@@ -14,32 +14,33 @@ const doc = {
 
 const state = {
     host: 'http://localhost:8000/',
-    database: []
+    ships: []
 };
 getDatabase();
 function getDatabase() {
-    let url = state.host + 'database';
+    let url = state.host + 'ships';
     fetch(url)
     .then(response => response.json())
     .then(result => {
 
-        state.database = result;
+        state.ships = result;
         render();
     });
 }
 
 function render() {
     let rows = '';
-    state.database.forEach( (database) => {
+    state.ships.forEach( (ships) => {
         rows += `
         <tr>
-            <td>${database.name}</td>
-            <td>${database.size}</td>
-            <td>${database.price}</td>
-            <td>${database.numberofpersons}</td>
-            <td>${database.trailer}</td>
+            <td>${ships.name}</td>
+            <td>${ships.length}</td>
+            <td>${ships.price}</td>
+            <td>${ships.person}</td>
+            <td>${ships.trailer}</td>
         </tr>
-    `;        
+      `;  
+            
     });
     doc.tbody.innerHTML = rows;
 }

@@ -8,8 +8,34 @@
 * Licenc: GNU GPL
 */
 
+table {
+    font-family: arial,sans-serif;
+    border-collapse: collapse;
+    width: 88%;
+}
+
+td,th {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:hover {
+    background-color: rgb(12, 180, 189);
+    color: white;
+}
+
+
 .about {
-    border-top: solid 3px red;
+    border-top: solid 3px blue;
     border-bottom: solid 3px green;
     text-align: center;
     position: fixed;
