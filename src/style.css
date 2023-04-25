@@ -8,6 +8,35 @@
 * Licenc: GNU GPL
 */
 
+blockquote{
+   display: block;
+   position: relative;
+   width: 50%;
+   margin: 5rem auto;
+   padding: .5rem;
+   font-size: 1.5rem;
+   line-height: 1.5rem;
+   font-family: 'Times', serif;
+   color: #1785b5;
+}
+
+blockquote::before {
+    content: '\201c';
+    top: 10px;
+    left: -40px; 
+}
+
+blockquote::after {
+    content: '\201d';
+    bottom: -30px;
+}
+
+blockquote::before,
+blockquote::after {
+    font-size: 6rem;
+    position: absolute;
+}
+
 table {
     font-family: arial,sans-serif;
     border-collapse: collapse;
@@ -36,7 +65,7 @@ tr:hover {
 
 .about {
     border-top: solid 3px blue;
-    border-bottom: solid 3px green;
+    border-bottom: solid 3px blue;
     text-align: center;
     position: fixed;
     top: 50px;
@@ -44,3 +73,4 @@ tr:hover {
     width: 600px;
     transform: rotate(45deg);
 }
+
